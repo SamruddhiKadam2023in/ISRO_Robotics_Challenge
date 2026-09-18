@@ -36,9 +36,8 @@ Craters and terrain hazards identified and bounded on a real planetary-surface i
 
 ### 🎯 Path Planning to a Safe Spot
 Live detection run showing craters (red) and safe landing spots (green) identified on a terrain image, with an estimated path traced toward a safe zone.
-<img src="src/path_planning_navigation/Path_Planning with Safe_Spot.png" ...>
 
-<img src="src/path_planning_navigation/Path_Planning_with_Safe_Spot_.png" alt="Application window showing path planning toward a detected safe spot" width="700">
+<img src="src/path_planning_navigation/Path_Planning%20with%20Safe_Spot.png" alt="Application window showing path planning toward a detected safe spot" width="700">
 
 ### 🟥🟩 Crater & Safe-Spot Detection
 Combined detection output distinguishing hazardous crater regions (red) from viable safe-landing regions (green) across a terrain image.
@@ -72,13 +71,13 @@ ISRO-robotics-2025/
 │   │   ├── RRT_STAR.py
 │   │   ├── Kalman_RRTSTAR.py
 │   │   ├── RRT_Path_Planning.png                # result image, co-located with the script
-│   │   └── Path_Planning_with_Safe_Spot.png     # result image, co-located with the script
+│   │   └── Path_Planning with Safe_Spot.png     # result image, co-located with the script 
 │   ├── state_estimation/
 │   │   └── kalman_filter_demo.py
 │   └── terrain_perception/
 │       ├── crater_detection.py
-│       ├── Creator_Detection.png                # ⚠️ typo — rename to Crater_Detection.png
-│       └── Creator_and_Safespot_Detection.png   # ⚠️ typo — rename to Crater_and_Safespot_Detection.png
+│       ├── Creator_Detection.png               
+│       └── Creator_and_Safespot_Detection.png   
 ├── .gitignore
 └── requirements.txt
 ```

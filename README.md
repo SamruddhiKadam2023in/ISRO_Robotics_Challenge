@@ -44,6 +44,8 @@ Combined detection output distinguishing hazardous crater regions (red) from via
 
 <img src="assets/results/landing-zone-detection.jpg" alt="Craters and safe spots both highlighted on a terrain image" width="700">
 
+> 🔗 For the full training/inference code behind the crater and safe-spot detection shown above, see the dedicated [Crater_and_Safe_Spot_Detection_using_YOLOv8](https://github.com/SamruddhiKadam2023in/Crater_and_Safe_Spot_Detection_using_YOLOv8) repository.
+
 ---
 
 ## 📂 Project Structure
@@ -70,8 +72,8 @@ ISRO-robotics-2025/
 │   ├── path_planning_navigation/
 │   │   ├── RRT_STAR.py
 │   │   ├── Kalman_RRTSTAR.py
-│   │   ├── RRT_Path_Planning.png                # result image, co-located with the script
-│   │   └── Path_Planning with Safe_Spot.png     # result image, co-located with the script 
+│   │   ├── RRT_Path_Planning.png               
+│   │   └── Path_Planning with Safe_Spot.png     
 │   ├── state_estimation/
 │   │   └── kalman_filter_demo.py
 │   └── terrain_perception/
@@ -119,7 +121,7 @@ python src/flight_control/visual_odometry.py
 | Integrated planning | `src/path_planning_navigation/Kalman_RRTSTAR.py` | Combines Kalman-filtered position estimates with RRT* planning over a grayscale terrain map image. |
 | Terrain perception | `src/terrain_perception/crater_detection.py` | Detects circular crater-like terrain features using Gaussian blur, morphological opening, Canny edges, and Hough Circle Transform. |
 | Flight control | `src/flight_control/visual_odometry.py` | Uses live webcam contour detection and a proportional controller to compute stabilization corrections relative to frame center. |
-| Crater/safe-spot detection *(script location TBD)* | — | A YOLOv8 model trained on `data/yolo/data.yaml` (`craters`, `safespots`) — responsible for the bounding-box detections and the "Path to Safe Spot" app seen in the Results section above. |
+| Crater/safe-spot detection | [Crater_and_Safe_Spot_Detection_using_YOLOv8](https://github.com/SamruddhiKadam2023in/Crater_and_Safe_Spot_Detection_using_YOLOv8) *(separate repo)* | A YOLOv8 model trained on 2 classes (`craters`, `safespots`) — responsible for the bounding-box detections and the "Path to Safe Spot" app seen in the Results section above. |
 
 ---
 

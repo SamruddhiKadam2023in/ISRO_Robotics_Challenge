@@ -36,6 +36,7 @@ Craters and terrain hazards identified and bounded on a real planetary-surface i
 
 ### 🎯 Path Planning to a Safe Spot
 Live detection run showing craters (red) and safe landing spots (green) identified on a terrain image, with an estimated path traced toward a safe zone.
+<img src="src/path_planning_navigation/Path_Planning with Safe_Spot.png" ...>
 
 <img src="src/path_planning_navigation/Path_Planning_with_Safe_Spot_.png" alt="Application window showing path planning toward a detected safe spot" width="700">
 

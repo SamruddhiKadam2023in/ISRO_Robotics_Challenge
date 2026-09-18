@@ -37,7 +37,7 @@ Craters and terrain hazards identified and bounded on a real planetary-surface i
 ### 🎯 Path Planning to a Safe Spot
 Live detection run showing craters (red) and safe landing spots (green) identified on a terrain image, with an estimated path traced toward a safe zone.
 
-<img src="src/path_planning_navigation/Path_Planning_with_Safe_Spot.png" alt="Application window showing path planning toward a detected safe spot" width="700">
+<img src="src/path_planning_navigation/Path_Planning_with_Safe_Spot_.png" alt="Application window showing path planning toward a detected safe spot" width="700">
 
 ### 🟥🟩 Crater & Safe-Spot Detection
 Combined detection output distinguishing hazardous crater regions (red) from viable safe-landing regions (green) across a terrain image.
@@ -138,12 +138,6 @@ names:
 ```
 
 Generated training runs, checkpoints, caches, and inference outputs are deliberately excluded from version control to keep the repository lightweight.
-
----
-
-## 📖 Project Background
-
-See [the project overview](docs/project_overview.txt) for the hardware and autonomy context, including the Pixhawk flight controller, Jetson Nano, ROS 1, LiDAR, and optical-flow work.
 
 ---
 

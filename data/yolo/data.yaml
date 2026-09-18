@@ -1,0 +1,8 @@
+path: .
+train: images/train
+val: images/train
+
+# Classes
+names:
+  0: craters
+  1: safespots

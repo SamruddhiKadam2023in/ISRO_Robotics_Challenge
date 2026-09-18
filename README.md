@@ -1,4 +1,4 @@
-# 🚁 ISRO Robotics Challenge Autonomous Quadcopter
+# 🚁 ISRO Robotics Challenge (Autonomous Quadcopter)
 
 > An experimental autonomy toolkit for vision-assisted navigation, state estimation, and collision-aware path planning.
 
@@ -8,17 +8,17 @@ This repository brings together software prototypes developed for an autonomous 
 
 ## 📌 Overview
 
-The project is organized around cooperating capabilities that a GPS-denied drone would need: seeing terrain features (perception), estimating its own position despite noisy sensors (estimation), planning a safe route around obstacles (planning), and reacting visually to stay stabilized (control). Each capability is implemented as an independent, runnable prototype rather than a single integrated flight stack.
+The project is organized around four cooperating capabilities that a GPS-denied drone would need: seeing terrain features (perception), estimating its own position despite noisy sensors (estimation), planning a safe route around obstacles (planning), and reacting visually to stay stabilized (control). Each capability is implemented as an independent, runnable prototype rather than a single integrated flight stack.
 
 ---
 
 ## ✨ Highlights
 
-- **Terrain perception** — OpenCV Hough-Circle crater detection, plus a YOLOv8 model trained to distinguish craters from safe landing spots
-- **State estimation** — a 2D Kalman filter prototype for smoothing noisy position measurements
-- **Path planning** — RRT* implementations (standalone, and combined with Kalman-filtered position estimates)
-- **Flight-control prototype** — webcam-based visual feedback and proportional-control experiment
-- **Training data** — a labelled 2-class terrain-image dataset (`craters`, `safespots`) under `data/yolo/`
+- **Terrain perception**: OpenCV Hough-Circle crater detection, plus a YOLOv8 model trained to distinguish craters from safe landing spots
+- **State estimation**: a 2D Kalman filter prototype for smoothing noisy position measurements
+- **Path planning**: RRT* implementations (standalone, and combined with Kalman-filtered position estimates)
+- **Flight-control prototype**: webcam-based visual feedback and proportional-control experiment
+- **Training data**: a labelled 2-class terrain-image dataset (`craters`, `safespots`) under `data/yolo/`
 
 ---
 
@@ -43,8 +43,6 @@ Live detection run showing craters (red) and safe landing spots (green) identifi
 Combined detection output distinguishing hazardous crater regions (red) from viable safe-landing regions (green) across a terrain image.
 
 <img src="assets/results/landing-zone-detection.jpg" alt="Craters and safe spots both highlighted on a terrain image" width="700">
-
-> ⚠️ **Note:** The bounding-box style detections above (crater detection, the safe-spot path-planning app, and the combined crater/safe-spot view) come from a **YOLOv8 model** trained on the two classes in `data.yaml` (`craters`, `safespots`). The included `crater_detection.py` uses classical Hough Circle Transform and draws circles rather than boxes, so it's a separate, complementary approach — not the source of these particular screenshots. If a training/inference script for the YOLO model exists (e.g. under `data/yolo/dataset/`), consider adding it to `src/terrain_perception/` so the repo's code fully matches what's shown here.
 
 ---
 
@@ -78,10 +76,12 @@ ISRO-robotics-2025/
 │   │   └── kalman_filter_demo.py
 │   └── terrain_perception/
 │       ├── crater_detection.py
-│       ├── Crator_Detection.png                
-│       └── Crator_and_Safespot_Detection.png  
+│       ├── Creator_Detection.png                # ⚠️ typo — rename to Crater_Detection.png
+│       └── Creator_and_Safespot_Detection.png   # ⚠️ typo — rename to Crater_and_Safespot_Detection.png
 ├── .gitignore
 └── requirements.txt
+```
+
 ---
 
 ## 🛠️ Tech Stack
@@ -140,6 +140,13 @@ names:
 Generated training runs, checkpoints, caches, and inference outputs are deliberately excluded from version control to keep the repository lightweight.
 
 ---
+
+## 📖 Project Background
+
+See [the project overview](docs/project_overview.txt) for the hardware and autonomy context, including the Pixhawk flight controller, Jetson Nano, ROS 1, LiDAR, and optical-flow work.
+
+---
+
 ## 🚧 Status
 
 This is an experimental academic robotics project. Individual scripts are standalone prototypes and may require parameter tuning for a specific map, camera, or flight platform.
